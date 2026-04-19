@@ -266,9 +266,10 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="py-16 relative" style={{
-          background: 'linear-gradient(135deg, #0f5132 0%, #1a5f3e 25%, #0f5132 50%, #1a5f3e 75%, #0f5132 100%)',
-          backgroundSize: '400% 400%',
-          animation: 'flow 20s ease-in-out infinite'
+          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-8 text-white drop-shadow-lg">TENTANG ANGGERIK DAMAI</h2>
@@ -295,9 +296,10 @@ export default function Home() {
 
         {/* Facilities Section */}
         <section id="facilities" className="py-16 relative" style={{
-          background: 'linear-gradient(135deg, #0f5132 0%, #1a5f3e 25%, #0f5132 50%, #1a5f3e 75%, #0f5132 100%)',
-          backgroundSize: '400% 400%',
-          animation: 'flow 20s ease-in-out infinite'
+          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">KEMUDAHAN TERSEDIA</h2>
@@ -314,9 +316,10 @@ export default function Home() {
 
         {/* Gallery Section */}
         <section id="gallery" className="py-16 relative" style={{
-          background: 'linear-gradient(135deg, #0f5132 0%, #1a5f3e 25%, #0f5132 50%, #1a5f3e 75%, #0f5132 100%)',
-          backgroundSize: '400% 400%',
-          animation: 'flow 20s ease-in-out infinite'
+          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">GALERI FOTO</h2>
@@ -340,9 +343,10 @@ export default function Home() {
 
         {/* Attractions Section */}
         <section id="attractions" className="py-16 relative" style={{
-          background: 'linear-gradient(135deg, #0f5132 0%, #1a5f3e 25%, #0f5132 50%, #1a5f3e 75%, #0f5132 100%)',
-          backgroundSize: '400% 400%',
-          animation: 'flow 20s ease-in-out infinite'
+          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">LOKASI TARIKAN TERDEKAT</h2>
@@ -359,9 +363,10 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-16 relative" style={{
-          background: 'linear-gradient(135deg, #0f5132 0%, #1a5f3e 25%, #0f5132 50%, #1a5f3e 75%, #0f5132 100%)',
-          backgroundSize: '400% 400%',
-          animation: 'flow 20s ease-in-out infinite'
+          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">HUBUNGI / TEMPAHAN</h2>
