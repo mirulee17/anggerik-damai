@@ -268,10 +268,11 @@ export default function Home() {
 
         {/* About Section */}
         <section id="about" className="py-16 relative" style={{
-          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-8 text-white drop-shadow-lg">TENTANG ANGGERIK DAMAI</h2>
@@ -301,10 +302,11 @@ export default function Home() {
 
         {/* Facilities Section */}
         <section id="facilities" className="py-16 relative" style={{
-          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">KEMUDAHAN TERSEDIA</h2>
@@ -321,10 +323,11 @@ export default function Home() {
 
         {/* Gallery Section */}
         <section id="gallery" className="py-16 relative" style={{
-          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">GALERI FOTO</h2>
@@ -355,10 +358,11 @@ export default function Home() {
 
         {/* Attractions Section */}
         <section id="attractions" className="py-16 relative" style={{
-          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">LOKASI TARIKAN TERDEKAT</h2>
@@ -375,10 +379,11 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-16 relative" style={{
-          backgroundImage: 'url("/vanilla bg.jpg")',
+          backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed'
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">HUBUNGI / TEMPAHAN</h2>
