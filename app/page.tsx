@@ -21,6 +21,8 @@ export default function Home() {
   const [prevBgImageIndex, setPrevBgImageIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedHomestay, setSelectedHomestay] = useState<Homestay | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Perlis Attraction Background Images
   const perlisBgImages = [
@@ -65,7 +67,7 @@ export default function Home() {
       id: 1,
       name: "Pintu masuk homestay...hijau mendamaikan",
       location: "Kangar, Perlis, Malaysia",
-      price: 120,
+      price: 200,
       image: "/homestay1.jpg",
       description: "Pintu masuk homestay...hijau mendamaikan"
     },
@@ -73,7 +75,7 @@ export default function Home() {
       id: 2,
       name: "Ruang santai bersama mini library",
       location: "Kangar, Perlis, Malaysia",
-      price: 150,
+      price: 200,
       image: "/homestay2.jpg",
       description: "Ruang santai bersama mini library"
     },
@@ -81,7 +83,7 @@ export default function Home() {
       id: 3,
       name: "Bilik pertama....Single bed untuk si bujang",
       location: "Kangar, Perlis, Malaysia",
-      price: 90,
+      price: 200,
       image: "/homestay3.jpg",
       description: "Bilik pertama....Single bed untuk si bujang"
     },
@@ -89,7 +91,7 @@ export default function Home() {
       id: 4,
       name: "Bilik Kedua....Tempat letak pakaian pun ada",
       location: "Kangar, Perlis, Malaysia",
-      price: 110,
+      price: 200,
       image: "/homestay4.jpg",
       description: "Bilik Kedua....Tempat letak pakaian pun ada"
     },
@@ -97,7 +99,7 @@ export default function Home() {
       id: 5,
       name: "Bilik Ketiga...sesuai untuk keluarga yang ramai",
       location: "Kangar, Perlis, Malaysia",
-      price: 130,
+      price: 200,
       image: "/homestay5.jpg",
       description: "Bilik Ketiga...sesuai untuk keluarga yang ramai"
     },
@@ -105,7 +107,7 @@ export default function Home() {
       id: 6,
       name: "Kamar mandi yang selesa",
       location: "Kangar, Perlis, Malaysia",
-      price: 100,
+      price: 200,
       image: "/homestay6.jpg",
       description: "Kamar mandi yang selesa"
     },
@@ -113,7 +115,7 @@ export default function Home() {
       id: 7,
       name: "Bahagian dapur...boleh masak untuk keluarga atau kawan-kawan",
       location: "Kangar, Perlis, Malaysia",
-      price: 180,
+      price: 200,
       image: "/homestay7.jpg",
       description: "Bahagian dapur...boleh masak untuk keluarga atau kawan-kawan"
     },
@@ -121,7 +123,7 @@ export default function Home() {
       id: 8,
       name: "Freezer pun ada..mana tau nak simpan makanan",
       location: "Kangar, Perlis, Malaysia",
-      price: 80,
+      price: 200,
       image: "/homestay8.jpg",
       description: "Freezer pun ada..mana tau nak simpan makanan"
     },
@@ -129,7 +131,7 @@ export default function Home() {
       id: 9,
       name: "Ruang belakang homestay...siap ada buaian untuk bersantai",
       location: "Kuala Lumpur, Malaysia",
-      price: 140,
+      price: 200,
       image: "/homestay9.jpg",
       description: "Ruang belakang homestay...siap ada buaian untuk bersantai"
     }
@@ -325,7 +327,14 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">GALERI FOTO</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {homestays.map((homestay) => (
-                <div key={homestay.id} className="overflow-hidden rounded-lg shadow-lg group cursor-pointer bg-white/90 backdrop-blur-sm">
+                <div 
+                  key={homestay.id} 
+                  onClick={() => {
+                    setSelectedHomestay(homestay);
+                    setIsModalOpen(true);
+                  }}
+                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                >
                   <img
                     src={homestay.image}
                     alt={homestay.name}
@@ -443,6 +452,65 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Modal */}
+      {isModalOpen && selectedHomestay && (
+        <div 
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative">
+              <img
+                src={selectedHomestay.image}
+                alt={selectedHomestay.name}
+                className="w-full h-96 object-cover rounded-t-3xl"
+              />
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-colors"
+              >
+                <svg className="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">{selectedHomestay.name}</h2>
+              <p className="text-gray-600 mb-6">{selectedHomestay.location}</p>
+              
+              <div className="bg-green-50 rounded-lg p-4 mb-6">
+                <p className="text-gray-600 text-sm">Harga per 1 hari 1 malam</p>
+                <p className="text-4xl font-bold text-green-700">RM {selectedHomestay.price}</p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Penerangan</h3>
+                <p className="text-gray-700 leading-relaxed">{selectedHomestay.description}</p>
+              </div>
+              
+              <div className="flex gap-3">
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="flex-1 bg-green-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-800 transition-colors"
+                >
+                  Tempah Sekarang
+                </button>
+                <button
+                  onClick={() => setIsModalOpen(false)}
+                  className="flex-1 bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-300 transition-colors"
+                >
+                  Tutup
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </div>
   );
