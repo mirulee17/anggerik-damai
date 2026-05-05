@@ -289,8 +289,11 @@ export default function Home() {
                 Sesuai untuk family, kawan-kawan, atau yang nak short getaway santai-santai kat Perlis. Suasana tenang, selesa, memang ngam untuk rehat hilang penat.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Harga? Jangan bimbang… memang berpatutan 👍
+                Harga? Jangan bimbang… memang berpatutan serendah RM 200 untuk 1 hari 1 malam.
                 Yang penting, puas hati dan selesa!
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                Harga boleh dirunding untuk tempahan 3 hari atau lebih. Jom la mai, kami tunggu!
               </p>
             </div>
           </div>
@@ -484,7 +487,7 @@ export default function Home() {
               <p className="text-gray-600 mb-6">{selectedHomestay.location}</p>
               
               <div className="bg-green-50 rounded-lg p-4 mb-6">
-                <p className="text-gray-600 text-sm">Harga per 1 hari 1 malam</p>
+                <p className="text-gray-600 text-sm">Harga per 1 hari 1 malam (*harga boleh dirunding untuk 3 hari atau lebih)</p>
                 <p className="text-4xl font-bold text-green-700">RM {selectedHomestay.price}</p>
               </div>
               
