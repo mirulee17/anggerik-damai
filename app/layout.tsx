@@ -85,9 +85,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/Anggerik_Damai_homestay_logo.png",
-    shortcut: "/Anggerik_Damai_homestay_logo.png",
-    apple: "/Anggerik_Damai_homestay_logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   manifest: "/manifest.json",
   category: "accommodation",
