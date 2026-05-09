@@ -162,8 +162,8 @@ export default function Home() {
       <div className="relative min-h-screen bg-black/20 pt-28">
         {/* Header */}
         <header className="bg-white/95 shadow-lg fixed inset-x-0 top-0 z-50 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-4">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-4">
               <div>
                 <img src="/Anggerik_Damai_homestay_logo.png" alt="Anggerik Damai Logo" className="h-18 w-auto object-contain" />
               </div>
@@ -242,8 +242,8 @@ export default function Home() {
             />
             {/* Hero Banner */}
             <section id="home" className="relative bg-black/30 text-white py-20">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="text-5xl md:text-6xl font-bold mb-12 drop-shadow-lg">
+              <div className="max-w-7xl mx-auto px-6 text-center">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 md:mb-12 drop-shadow-lg">
                   HOMESTAY ANGGERIK DAMAI
                 </h1>
                 <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-lg">
@@ -274,8 +274,8 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed'
         }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold mb-8 text-white drop-shadow-lg">TENTANG ANGGERIK DAMAI</h2>
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white drop-shadow-lg">TENTANG ANGGERIK DAMAI</h2>
             <div className="bg-white/90 rounded-lg shadow-lg p-8 backdrop-blur-sm">
               <p className="text-lg text-gray-700 mb-6">
                 Assalamualaikum WBT
@@ -308,11 +308,11 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed'
         }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">KEMUDAHAN TERSEDIA</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white drop-shadow-lg">KEMUDAHAN TERSEDIA</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {facilities.map((facility, index) => (
-                <div key={index} className="bg-white/90 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow backdrop-blur-sm">
+                <div key={index} className="bg-white/90 rounded-3xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow backdrop-blur-sm">
                   <div className="text-5xl mb-3">{facility.icon}</div>
                   <p className="font-semibold text-gray-900">{facility.name}</p>
                 </div>
@@ -329,9 +329,9 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed'
         }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">GALERI FOTO</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white drop-shadow-lg">GALERI FOTO</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {homestays.map((homestay) => (
                 <div 
                   key={homestay.id} 
@@ -339,13 +339,15 @@ export default function Home() {
                     setSelectedHomestay(homestay);
                     setIsModalOpen(true);
                   }}
-                  className="overflow-hidden rounded-lg shadow-lg group cursor-pointer bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  className="overflow-hidden rounded-3xl shadow-lg group cursor-pointer bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <img
-                    src={homestay.image}
-                    alt={homestay.name}
-                    className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <div className="overflow-hidden w-full aspect-[4/3]">
+                    <img
+                      src={homestay.image}
+                      alt={homestay.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="p-4">
                     <p className="text-lg text-gray-700 mb-6">{homestay.name}</p>
                     <p className="text-sm text-gray-600">{homestay.location}</p>
@@ -357,15 +359,15 @@ export default function Home() {
         </section>
 
         {/* Attractions Section */}
-        <section id="attractions" className="py-16 relative" style={{
+        <section id="attractions" className="py-16 sm:py-20 relative" style={{
           backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed'
         }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">LOKASI TARIKAN TERDEKAT</h2>
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white drop-shadow-lg">LOKASI TARIKAN TERDEKAT</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {attractions.map((attraction, index) => (
                 <div key={index} className="bg-white/90 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow backdrop-blur-sm">
@@ -378,18 +380,18 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 relative" style={{
+        <section id="contact" className="py-16 sm:py-20 relative" style={{
           backgroundImage: 'url("/bgreen.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed'
         }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">HUBUNGI / TEMPAHAN</h2>
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white drop-shadow-lg">HUBUNGI / TEMPAHAN</h2>
             <div className="mx-auto max-w-2xl">
-              <div className="bg-white/95 rounded-3xl shadow-2xl p-10 backdrop-blur-sm border border-white/30">
-                <h3 className="text-3xl font-bold mb-8 text-center text-green-700">Hubungi Kami</h3>
+              <div className="bg-white/95 rounded-3xl shadow-2xl p-6 sm:p-8 backdrop-blur-sm border border-white/30">
+                <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-green-700">Hubungi Kami</h3>
                 <div className="space-y-6 text-center">
                   <div>
                     <p className="font-semibold text-green-700 mb-2">Telefon</p>
@@ -425,8 +427,8 @@ export default function Home() {
         </section>
       {/* Footer */}
       <footer className="bg-gray-900/95 text-white py-12 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
               <h4 className="text-lg font-bold mb-4">Anggerik Damai</h4>
               <p className="text-gray-400">Pintu gerbang untuk pengalaman menginap Malaysia yang terbaik.</p>
@@ -472,11 +474,13 @@ export default function Home() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative">
-              <img
-                src={selectedHomestay.image}
-                alt={selectedHomestay.name}
-                className="w-full h-96 object-cover rounded-t-3xl"
-              />
+              <div className="w-full aspect-[16/9] overflow-hidden rounded-t-3xl">
+                <img
+                  src={selectedHomestay.image}
+                  alt={selectedHomestay.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-4 right-4 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-colors"
@@ -501,16 +505,16 @@ export default function Home() {
                 <p className="text-gray-700 leading-relaxed">{selectedHomestay.description}</p>
               </div>
               
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="flex-1 bg-green-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-800 transition-colors"
+                  className="w-full sm:flex-1 bg-green-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-800 transition-colors"
                 >
                   Tempah Sekarang
                 </button>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="flex-1 bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-300 transition-colors"
+                  className="w-full sm:flex-1 bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-300 transition-colors"
                 >
                   Tutup
                 </button>
