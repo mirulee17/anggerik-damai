@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.next/
+
+# Allow crawling of main content
+Allow: /
+
+# Sitemap
+Sitemap: https://anggerikdamai.com.my/sitemap.xml

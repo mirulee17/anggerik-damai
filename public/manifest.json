@@ -1,0 +1,27 @@
+{
+  "name": "Homestay Anggerik Damai",
+  "short_name": "Anggerik Damai",
+  "description": "Penginapan homestay yang selesa dan berpatutan di Kangar, Perlis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f5132",
+  "theme_color": "#0f5132",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ms-MY",
+  "categories": ["travel", "accommodation", "hospitality"],
+  "icons": [
+    {
+      "src": "/Anggerik_Damai_homestay_logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Anggerik_Damai_homestay_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
